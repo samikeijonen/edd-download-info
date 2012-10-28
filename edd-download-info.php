@@ -77,6 +77,7 @@ class EDD_Download_Info {
 
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'metabox.php' );
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'widgets.php' );
+		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'taxonomy.php' );
 
 	}
 
