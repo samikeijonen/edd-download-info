@@ -65,8 +65,13 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* Get version number from EDD version or EDD Software Licence Plugin. */
 		$version = get_post_meta( $id, '_edd_sl_version', true );
 		
-		/* If there is no demo, support, doc link and version, get out of here. */
-		if ( empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link )&& empty( $version ) )
+		/* Get download count. */
+		if( function_exists( 'edd_get_download_sales_stats' ) ) {
+			$download_count = edd_get_download_sales_stats( $id );
+		}
+		
+		/* If there is no feature image, purchase link, demo, support, doc link, version or download count, get out of here. */
+		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link )&& empty( $version ) && empty( $download_count ) )
 			return false;
 
 		/* Open the before widget HTML. */
@@ -76,11 +81,42 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		if ( $instance['title'] )
 			echo $before_title . apply_filters( 'widget_title',  $instance['title'], $instance, $this->id_base ) . $after_title;
 		
+		/* Action hook. */
+		do_action( 'edd_download_info_before_widget' );
+		
+		/* If feature image is set, echo it. */
+		if ( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) {
+			echo get_the_post_thumbnail( $id, apply_filters( 'edd_download_info_feature_image_size', 'medium' ) );
+		}
+		
+		/* If purchase link is set, echo it. */
+		if ( $instance['show_purchase_link'] ) {
+			//echo do_shortcode( apply_filters( 'edd_download_info_purchase_link', '[purchase_link id="' . $id . '" text="' . __( 'Purchase', 'edd-download-info' ) . '"]' ) );
+			if( function_exists( 'edd_append_purchase_link' ) ) {
+				edd_append_purchase_link( $id );
+			}
+		}
+		
+		/* Get color from edd settings. */
+		global $edd_options;
+		$color = isset( $edd_options[ 'edd_download_info_demo_link_style' ] ) ? $edd_options[ 'edd_download_info_demo_link_style' ] : 'green';
+		$style = isset( $edd_options[ 'button_style' ] ) ? $edd_options[ 'button_style' ] : 'button';
+		
+		/* If demo link is set, echo it. */
+		if ( $instance['show_demo_link'] && !empty( $download_demo_link ) ) { ?> 
+		
+			<a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>" class="<?php echo $style . ' ' . $color . ' edd-submit'; ?>"><?php _e( 'Demo', 'edd-download-info' ); ?></a>
+		
+		<?php
+		}
 		?>
 		
 		<ul class="edd-download-info">
 		
 		<?php
+		
+		/* Action hook. */
+		do_action( 'edd_download_info_before_list' );
 		
 		/* If version is set, echo it. */
 		if ( !empty( $version ) ) { ?>
@@ -89,8 +125,15 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		
 		<?php }
 		
-		/* If demo link is set, echo it. */
-		if ( !empty( $download_demo_link ) ) { ?>
+		/* If download_count is set, echo it. */
+		if ( !empty( $download_count ) ) { ?>
+			
+			<li><?php printf( esc_html__( 'Downloads: %1$s', 'edd-download-info' ), $download_count ); ?></li>
+		
+		<?php }
+		
+		/* If demo link is set and it is not as button, echo it. */
+		if ( !empty( $download_demo_link ) && !$instance['show_demo_link'] ) { ?>
 			
 			<li><a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>"><?php _e( 'Demo', 'edd-download-info' ); ?></a></li>
 		
@@ -108,11 +151,19 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			
 			<li><a href="<?php echo $download_doc_link; ?>" title="<?php _e( 'Documentation', 'edd-download-info' ); ?>"><?php _e( 'Documentation', 'edd-download-info' ); ?></a></li>
 		
-		<?php } ?>
+		<?php } 
+		
+		/* Action hook. */
+		do_action( 'edd_download_info_after_list' );
+		
+		?>
 		
 		</ul>
 		
 		<?php
+		
+		/* Action hook. */
+		do_action( 'edd_download_info_after_widget' );
 		
 		/* Close the after widget HTML. */
 		echo $after_widget;
@@ -131,6 +182,9 @@ class EDD_Download_Info_Widget extends WP_Widget {
 
 		/* Strip tags from elements that don't need them. */
 		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['show_feature_image'] = strip_tags( $new_instance['show_feature_image'] );
+		$instance['show_purchase_link'] = strip_tags( $new_instance['show_purchase_link'] );
+		$instance['show_demo_link'] = strip_tags( $new_instance['show_demo_link'] );
 		
 		return $instance;
 		
@@ -145,7 +199,10 @@ class EDD_Download_Info_Widget extends WP_Widget {
 
 		/* Set up the defaults. */
 		$defaults = apply_filters( 'edd_download_info_widget_defaults', array(
-			'title' => __( 'Download info', 'edd-download-info' )
+			'title'    => __( 'Download info', 'edd-download-info' ),
+			'show_feature_image' => 1,
+			'show_purchase_link' => 1,
+			'show_demo_link' => 1
 		) );
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -155,6 +212,21 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			<p>
 				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'edd-download-info' ); ?></label>
 				<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
+			</p>
+			
+			<p>
+				<input type="checkbox" value="1" <?php checked( '1', $instance['show_feature_image'] ); ?> id="<?php echo $this->get_field_id( 'show_feature_image' ); ?>" name="<?php echo $this->get_field_name( 'show_feature_image' ); ?>" />
+				<label for="<?php echo $this->get_field_id( 'show_feature_image' ); ?>"><?php _e( 'Show Feature Image?', 'edd-download-info' ); ?></label> 
+			</p>
+			
+			<p>
+				<input type="checkbox" value="1" <?php checked( '1', $instance['show_purchase_link'] ); ?> id="<?php echo $this->get_field_id( 'show_purchase_link' ); ?>" name="<?php echo $this->get_field_name( 'show_purchase_link' ); ?>" />
+				<label for="<?php echo $this->get_field_id( 'show_purchase_link' ); ?>"><?php _e( 'Show purchase link in button?', 'edd-download-info' ); ?></label> 
+			</p>
+			
+			<p>
+				<input type="checkbox" value="1" <?php checked( '1', $instance['show_demo_link'] ); ?> id="<?php echo $this->get_field_id( 'show_demo_link' ); ?>" name="<?php echo $this->get_field_name( 'show_demo_link' ); ?>" />
+				<label for="<?php echo $this->get_field_id( 'show_demo_link' ); ?>"><?php _e( 'Show demo link in button?', 'edd-download-info' ); ?></label> 
 			</p>
 			
 		<div style="clear:both;">&nbsp;</div>
@@ -215,6 +287,13 @@ class EDD_Download_Info_Features_Widget extends WP_Widget {
 		
 		/* Get id of the 'download'. */
 		$id = $wp_query->get_queried_object_id();
+		
+		/* Get terms from taxonomy 'edd_download_info_feature'. */
+        $features = get_the_terms( $id, 'edd_download_info_feature' );
+		
+		/* If there is no features, get out of here. */
+		if ( empty( $features ) )
+			return false;
 
 		/* Open the before widget HTML. */
 		echo $before_widget;
@@ -224,23 +303,23 @@ class EDD_Download_Info_Features_Widget extends WP_Widget {
 			echo $before_title . apply_filters( 'widget_title',  $instance['title'], $instance, $this->id_base ) . $after_title;
 		
 		/* Action hook.*/
-		do_action( 'edd_before_feature_widget' );
+		do_action( 'edd_download_info_before_feature_widget' );
 		
 		/* Get terms from taxonomy 'edd_download_info_feature'. */
-        $features = get_terms( 'edd_download_info_feature' );
+        $features = get_the_terms( $id, 'edd_download_info_feature' );
 		
-		/* List features if there is no error. */
-		if ( is_wp_error( $features ) ) {
-                return;
+		/* List features if not empty. This is kind of a doublecheck. */
+		if ( empty( $features ) ) {
+			return;
             } else {
                 echo "<ul class=\"edd-download-info-features-widget\">\n";
                 
 				foreach ( $features as $feature ) {
 					if ( $instance['show_download_features_links'] ) {
-						echo '<li><a href="' . get_term_link( $feature ) . '" title="' . esc_attr( $feature->name ) . '" rel="bookmark">' . $feature->name . '</a></li>'."\n";
+						echo '<li><a href="' . get_term_link( $feature ) . '" title="' . esc_attr( $feature->name ) . '" rel="bookmark">' . $feature->name . '</a></li>' . "\n";
 					}
 					else {
-						echo '<li>' . $feature->name . '</li>'."\n";
+						echo '<li>' . $feature->name . '</li>' . "\n";
 					}
 				}
 				
@@ -249,7 +328,7 @@ class EDD_Download_Info_Features_Widget extends WP_Widget {
             }
 			
 		/* Action hook.*/
-		do_action( 'edd_after_feature_widget' );
+		do_action( 'edd_download_info_after_feature_widget' );
 		
 		/* Close the after widget HTML. */
 		echo $after_widget;
