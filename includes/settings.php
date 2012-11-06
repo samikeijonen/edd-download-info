@@ -8,7 +8,7 @@ add_filter( 'edd_settings_styles', 'edd_download_info_add_styles' );
  * *
  * @access      private
  * @since       0.1.0
- * @param 		$settings array the existing plugin settings
+ * @param       $settings array the existing plugin settings
  * @return      array
 */
 function edd_download_info_add_styles( $settings ) {
