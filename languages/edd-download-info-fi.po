@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: EDD Download Info\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-11-06 19:27+0200\n"
-"PO-Revision-Date: 2012-11-06 19:38+0200\n"
+"PO-Revision-Date: 2012-11-10 11:45+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -142,7 +142,7 @@ msgstr "Näytä latauksien ominaisuudet."
 
 #: includes/widgets.php:268 includes/widgets.php:365
 msgid "Download Features"
-msgstr "sLatauksien ominaisuudet"
+msgstr "Latauksien ominaisuudet"
 
 #: includes/widgets.php:380
 msgid "Show features as links?"
