@@ -70,8 +70,8 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			$download_count = edd_get_download_sales_stats( $id );
 		}
 		
-		/* If there is no feature image, purchase link, demo, support, doc link, version or download count, get out of here. */
-		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link )&& empty( $version ) && empty( $download_count ) )
+		/* If there is no feature image, purchase link, demo, support, doc link or download count, get out of here. */
+		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && empty( $download_count ) )
 			return false;
 
 		/* Open the before widget HTML. */
@@ -347,7 +347,7 @@ class EDD_Download_Info_Features_Widget extends WP_Widget {
 
 		/* Strip tags from elements that don't need them. */
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['show_download_features_links_links'] = strip_tags( $new_instance['show_download_features_links'] );
+		$instance['show_download_features_links'] = strip_tags( $new_instance['show_download_features_links'] );
 		
 		return $instance;
 		

@@ -27,8 +27,33 @@ And another widget is for download features.
 
 = Widgets usage =
 
+Under Appearance >> Widgets you can find two widgets: Download Features and Download Info.
+
+Using Download Features is easy. Just drag it into a widget area and write title. You can also check whether to use links or not in features.
+
+In Download Info widget you get version number, download count, demo, support and documentation link.
+
+1. Version number comes from EDD version or EDD Software Licence Plugin.
+1. Download count comes from EDD `edd_get_download_sales_stats` function.
+1. You can set demo link to show as button and you can change default demo link style under Downloads >> Settings >> Styles.
+1. You can set demo, support and documentation link when you're editing download. There is metabox Download Info on the right.
+1. You can also show purchase link in button.
+
 = Shortcode usage =
 
+This plugin register shortcode `[edd_download_info_link]`. This gives you download button with custom link. There are couple of attributes in this shortcode.
+
+1. url: you definitely want to use this because default url link is empty. This is the url you want go when you click this button. 
+1. text: default text is Download.
+1. style: default style is button.
+1. color: default style is blue or what you have set under Downloads >> Settings >> Styles for Default button color.
+1. class: default is edd-submit.
+
+Example usage.
+
+`
+[edd_download_info_link text="Download Free" url="http://wordpress.org/extend/plugins/edd-download-info" color="gray"]
+`
 
 == Installation ==
 
@@ -43,8 +68,10 @@ I needed this feature and someone else might need it too.
 
 == Screenshots ==
 
-1. Download features
-2. Download info widgets
+1. Download Info
+2. Download Features
+3. Download Info Widget
+4. Download Features Widget
 
 == Changelog ==
 
