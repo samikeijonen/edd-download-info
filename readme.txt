@@ -44,6 +44,7 @@ In Download Info widget you get version number, download count, demo, support an
 This plugin register shortcode `[edd_download_info_link]`. This gives you download button with custom link. There are couple of attributes in this shortcode.
 
 1. url: you definitely want to use this because default url link is empty. This is the url you want go when you click this button. 
+1. open: By default link opens in new window. If you set attribute to no, link opens in the same window.
 1. text: default text is Download.
 1. style: default style is button.
 1. color: default style is blue or what you have set under Downloads >> Settings >> Styles for Default button color.
@@ -52,7 +53,7 @@ This plugin register shortcode `[edd_download_info_link]`. This gives you downlo
 Example usage.
 
 `
-[edd_download_info_link text="Download Free" url="http://wordpress.org/extend/plugins/edd-download-info" color="gray"]
+[edd_download_info_link text="Download Free" url="http://wordpress.org/extend/plugins/edd-download-info" color="gray" open="no"]
 `
 
 == Installation ==
