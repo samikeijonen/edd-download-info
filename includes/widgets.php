@@ -61,6 +61,9 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		
 		/* Get documentation link. */
 		$download_doc_link = get_post_meta( $id, '_download_doc_link', true );
+
+		/* Get updated date. */
+		$download_updated_date = get_post_meta( $id, '_download_updated_date', true );
 		
 		/* Get version number from EDD version or EDD Software Licence Plugin. */
 		$version = get_post_meta( $id, '_edd_sl_version', true );
@@ -70,8 +73,8 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			$download_count = edd_get_download_sales_stats( $id );
 		}
 		
-		/* If there is no feature image, purchase link, demo, support, doc link or download count, get out of here. */
-		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && empty( $download_count ) )
+		/* If there is no feature image, purchase link, demo, support, doc link, download count or updated date, get out of here. */
+		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && empty( $download_count ) && empty( $download_updated_date ) )
 			return false;
 
 		/* Open the before widget HTML. */
@@ -150,6 +153,13 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		if ( !empty( $download_doc_link ) ) { ?>
 			
 			<li><a href="<?php echo $download_doc_link; ?>" title="<?php _e( 'Documentation', 'edd-download-info' ); ?>"><?php _e( 'Documentation', 'edd-download-info' ); ?></a></li>
+		
+		<?php }
+
+		/* If updated date is set, echo it. */
+		if ( !empty( $download_updated_date ) ) { ?>
+			
+			<li><?php _e( 'Updated:', 'edd-download-info' ); ?><?php echo date_i18n( get_option( 'date_format' ), esc_attr( $download_updated_date ) ); ?></li>
 		
 		<?php } 
 		

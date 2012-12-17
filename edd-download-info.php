@@ -50,6 +50,9 @@ class EDD_Download_Info {
 
 		/* Set constant path to the plugin directory. */
 		define( 'EDD_DOWNLOAD_INFO_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+		
+		/* Set constant path to the plugin directory. */
+		define( 'EDD_DOWNLOAD_INFO_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 		/* Set the constant path to the includes directory. */
 		define( 'EDD_DOWNLOAD_INFO_INCLUDES', EDD_DOWNLOAD_INFO_DIR . trailingslashit( 'includes' ) );
@@ -80,6 +83,7 @@ class EDD_Download_Info {
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'taxonomy.php' );
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'settings.php' );
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'shortcodes.php' );
+		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'scripts.php' );
 		
 	}
 

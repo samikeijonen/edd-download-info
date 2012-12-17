@@ -47,6 +47,13 @@ function edd_download_info_class_meta_box( $object, $box ) { ?>
 		<input class="widefat" type="text" name="download_doc_link" id="download_doc_link" value="<?php echo esc_attr( get_post_meta( $object->ID, '_download_doc_link', true ) ); ?>" size="30" />
 	</p>
 	
+	<p>
+		<label for="download_updated_date"><?php _e( "Add updated date.", 'edd-download-info' ); ?></label>
+		<br />
+		<?php $download_updated_date = get_post_meta( $object->ID, '_download_updated_date', true ); ?>
+		<input class="widefat edd_download_info_datepicker" type="text" name="download_updated_date" id="download_updated_date" value="<?php if ( !empty( $download_updated_date ) ) echo date_i18n( __( 'm/d/y', 'edd-download-info' ), esc_attr( $download_updated_date ) ); ?>" size="30" />
+	</p>
+	
 	<?php do_action( 'edd_download_info_after_link_fields', $object->ID ); // Add action hook after output. ?>
 	
 	<?php
@@ -107,7 +114,30 @@ function edd_download_info_save_meta_boxes( $post_id, $post ) {
 			delete_post_meta( $post_id, $meta_key, $meta_value );
 	
 	}
+	
+	/* Save updated date. */
+	
+	/* Get the posted data and sanitize it for use as an date. */
+	$new_meta_value = ( isset( $_POST['download_updated_date'] ) ? strtotime( sanitize_text_field( $_POST['download_updated_date'] ) ) : '' );
+	
+	/* Get the meta key like this: _download_demo_link. */
+	$meta_key = '_download_updated_date';
 
+	/* Get the meta value of the custom field key. */
+	$meta_value = get_post_meta( $post_id, $meta_key, true );
+
+	/* If a new meta value was added and there was no previous value, add it. */
+	if ( $new_meta_value && '' == $meta_value )
+		add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+
+	/* If the new meta value does not match the old value, update it. */
+	elseif ( $new_meta_value && $new_meta_value != $meta_value )
+		update_post_meta( $post_id, $meta_key, $new_meta_value );
+
+	/* If there is no new meta value but an old value exists, delete it. */
+	elseif ( '' == $new_meta_value && $meta_value )
+		delete_post_meta( $post_id, $meta_key, $meta_value );
+		
 }
 
 ?>
