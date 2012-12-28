@@ -159,7 +159,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* If updated date is set, echo it. */
 		if ( !empty( $download_updated_date ) ) { ?>
 			
-			<li><?php _e( 'Updated:', 'edd-download-info' ); ?><?php echo date_i18n( get_option( 'date_format' ), esc_attr( $download_updated_date ) ); ?></li>
+			<li><?php _e( 'Updated:', 'edd-download-info' ); ?> <?php echo date_i18n( get_option( 'date_format' ), esc_attr( $download_updated_date ) ); ?></li>
 		
 		<?php } 
 		
