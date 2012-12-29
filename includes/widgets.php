@@ -124,14 +124,14 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* If version is set, echo it. */
 		if ( !empty( $version ) ) { ?>
 			
-			<li><?php printf( esc_html__( 'Version: %1$s', 'edd-download-info' ), $version ); ?></li>
+			<li><?php printf( __( '<span class="edd-download-info-version">Version:</span> %1$s', 'edd-download-info' ), $version ); ?></li>
 		
 		<?php }
 		
 		/* If download_count is set, echo it. */
 		if ( !empty( $download_count ) ) { ?>
 			
-			<li><?php printf( esc_html__( 'Downloads: %1$s', 'edd-download-info' ), $download_count ); ?></li>
+			<li><?php printf( __( '<span class="edd-download-info-download">Downloads:</span> %1$s', 'edd-download-info' ), $download_count ); ?></li>
 		
 		<?php }
 		
@@ -159,7 +159,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* If updated date is set, echo it. */
 		if ( !empty( $download_updated_date ) ) { ?>
 			
-			<li><?php _e( 'Updated:', 'edd-download-info' ); ?> <?php echo date_i18n( get_option( 'date_format' ), esc_attr( $download_updated_date ) ); ?></li>
+			<li><?php _e( '<span class="edd-download-info-updated">Updated:</span>', 'edd-download-info' ); ?> <?php echo date_i18n( get_option( 'date_format' ), esc_attr( $download_updated_date ) ); ?></li>
 		
 		<?php } 
 		
