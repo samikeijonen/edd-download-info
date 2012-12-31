@@ -121,20 +121,6 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* Action hook. */
 		do_action( 'edd_download_info_before_list' );
 		
-		/* If version is set, echo it. */
-		if ( !empty( $version ) ) { ?>
-			
-			<li><?php printf( __( '<span class="edd-download-info-version">Version:</span> %1$s', 'edd-download-info' ), $version ); ?></li>
-		
-		<?php }
-		
-		/* If download_count is set, echo it. */
-		if ( !empty( $download_count ) ) { ?>
-			
-			<li><?php printf( __( '<span class="edd-download-info-download">Downloads:</span> %1$s', 'edd-download-info' ), $download_count ); ?></li>
-		
-		<?php }
-		
 		/* If demo link is set and it is not as button, echo it. */
 		if ( !empty( $download_demo_link ) && !$instance['show_demo_link'] ) { ?>
 			
@@ -154,8 +140,22 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			
 			<li><a href="<?php echo $download_doc_link; ?>" title="<?php _e( 'Documentation', 'edd-download-info' ); ?>"><?php _e( 'Documentation', 'edd-download-info' ); ?></a></li>
 		
+		<?php }		
+		
+		/* If version is set, echo it. */
+		if ( !empty( $version ) ) { ?>
+			
+			<li><?php printf( __( '<span class="edd-download-info-version">Version:</span> %1$s', 'edd-download-info' ), $version ); ?></li>
+		
 		<?php }
-
+		
+		/* If download_count is set, echo it. */
+		if ( !empty( $download_count ) ) { ?>
+			
+			<li><?php printf( __( '<span class="edd-download-info-download">Downloads:</span> %1$s', 'edd-download-info' ), $download_count ); ?></li>
+		
+		<?php }
+		
 		/* If updated date is set, echo it. */
 		if ( !empty( $download_updated_date ) ) { ?>
 			
