@@ -19,9 +19,9 @@ that first.
 
 This plugin is mainly for WordPress Themes and Plugins shop with some added features.
 
-1. Adds metabox where you can add URL for your demo, document and support site.
+1. Adds metabox where you can add URL for your demo, document and support site. There is also updated date because this is not normally same as updated date of your download 'post'.
 1. Adds download features (custom taxonomy).
-1. Adds two widgets. One widget is for showing download info like purchase link, demo, document and support site links, version number and download count. 
+1. Adds two widgets. One widget is for showing download info like purchase link, demo, document and support site links, version number, download count and updated date. 
 And another widget is for download features.
 1. Adds shortcode for "Free Download" button. This is for downloads which you want to give away free and host in wordpress.org for example, but still have them on your site as a download.
 
@@ -31,12 +31,12 @@ Under Appearance >> Widgets you can find two widgets: Download Features and Down
 
 Using Download Features is easy. Just drag it into a widget area and write title. You can also check whether to use links or not in features.
 
-In Download Info widget you get version number, download count, demo, support and documentation link.
+In Download Info widget you get version number, download count, updated date, demo, support and documentation link.
 
 1. Version number comes from EDD version or EDD Software Licence Plugin.
 1. Download count comes from EDD `edd_get_download_sales_stats` function.
 1. You can set demo link to show as button and you can change default demo link style under Downloads >> Settings >> Styles.
-1. You can set demo, support and documentation link when you're editing download. There is metabox Download Info on the right.
+1. You can set demo, support and documentation link and updated date when you're editing download. There is metabox Download Info on the right.
 1. You can also show purchase link in button.
 
 = Shortcode usage =
