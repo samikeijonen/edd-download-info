@@ -105,10 +105,13 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		$color = isset( $edd_options[ 'edd_download_info_demo_link_style' ] ) ? $edd_options[ 'edd_download_info_demo_link_style' ] : 'green';
 		$style = isset( $edd_options[ 'button_style' ] ) ? $edd_options[ 'button_style' ] : 'button';
 		
+		/* Open demo link in a new window or not. */
+		$open = $instance['open_demo_link'] ? '_blank' : '_self';
+		
 		/* If demo link is set, echo it. */
 		if ( $instance['show_demo_link'] && !empty( $download_demo_link ) ) { ?> 
 		
-			<a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>" class="<?php echo $style . ' ' . $color . ' edd-submit'; ?>"><?php _e( 'Demo', 'edd-download-info' ); ?></a>
+			<a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>" class="<?php echo $style . ' ' . $color . ' edd-submit'; ?>" target="<?php echo $open; ?>"><?php _e( 'Demo', 'edd-download-info' ); ?></a>
 		
 		<?php
 		}
@@ -124,7 +127,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* If demo link is set and it is not as button, echo it. */
 		if ( !empty( $download_demo_link ) && !$instance['show_demo_link'] ) { ?>
 			
-			<li><a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>"><?php _e( 'Demo', 'edd-download-info' ); ?></a></li>
+			<li><a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>" target="<?php echo $open; ?>"><?php _e( 'Demo', 'edd-download-info' ); ?></a></li>
 		
 		<?php }
 		
@@ -195,6 +198,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		$instance['show_feature_image'] = strip_tags( $new_instance['show_feature_image'] );
 		$instance['show_purchase_link'] = strip_tags( $new_instance['show_purchase_link'] );
 		$instance['show_demo_link'] = strip_tags( $new_instance['show_demo_link'] );
+		$instance['open_demo_link'] = strip_tags( $new_instance['open_demo_link'] );
 		
 		return $instance;
 		
@@ -212,7 +216,8 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			'title'    => __( 'Download info', 'edd-download-info' ),
 			'show_feature_image' => 1,
 			'show_purchase_link' => 1,
-			'show_demo_link' => 1
+			'show_demo_link' => 1,
+			'open_demo_link' => 1
 		) );
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -237,6 +242,11 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			<p>
 				<input type="checkbox" value="1" <?php checked( '1', $instance['show_demo_link'] ); ?> id="<?php echo $this->get_field_id( 'show_demo_link' ); ?>" name="<?php echo $this->get_field_name( 'show_demo_link' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'show_demo_link' ); ?>"><?php _e( 'Show demo link in button?', 'edd-download-info' ); ?></label> 
+			</p>
+			
+			<p>
+				<input type="checkbox" value="1" <?php checked( '1', $instance['open_demo_link'] ); ?> id="<?php echo $this->get_field_id( 'open_demo_link' ); ?>" name="<?php echo $this->get_field_name( 'open_demo_link' ); ?>" />
+				<label for="<?php echo $this->get_field_id( 'open_demo_link' ); ?>"><?php _e( 'Open demo link in a new window?', 'edd-download-info' ); ?></label> 
 			</p>
 			
 		<div style="clear:both;">&nbsp;</div>
