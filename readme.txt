@@ -37,7 +37,7 @@ In Download Info widget you get version number, download count, updated date, de
 1. Download count comes from EDD `edd_get_download_sales_stats` function.
 1. You can set demo link to show as button and you can change default demo link style under Downloads >> Settings >> Styles.
 1. You can set demo, support and documentation link and updated date when you're editing download. There is metabox Download Info on the right.
-1. You can also show purchase link in button.
+1. You can also show purchase link in button and open link in a new window.
 
 = Shortcode usage =
 
