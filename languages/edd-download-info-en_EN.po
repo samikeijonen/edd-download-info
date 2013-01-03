@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: EDD Download Info\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-31 18:20+0200\n"
-"PO-Revision-Date: 2012-12-31 18:20+0200\n"
+"POT-Creation-Date: 2013-01-03 12:08+0200\n"
+"PO-Revision-Date: 2013-01-03 12:08+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: en\n"
@@ -102,60 +102,64 @@ msgstr ""
 msgid "Display download info."
 msgstr ""
 
-#: includes/widgets.php:111 includes/widgets.php:127
+#: includes/widgets.php:114 includes/widgets.php:130
 msgid "Demo"
 msgstr ""
 
-#: includes/widgets.php:134
+#: includes/widgets.php:137
 msgid "Support"
 msgstr ""
 
-#: includes/widgets.php:141
+#: includes/widgets.php:144
 msgid "Documentation"
 msgstr ""
 
-#: includes/widgets.php:148
+#: includes/widgets.php:151
 #, php-format
 msgid "<span class=\"edd-download-info-version\">Version:</span> %1$s"
 msgstr ""
 
-#: includes/widgets.php:155
+#: includes/widgets.php:158
 #, php-format
 msgid "<span class=\"edd-download-info-download\">Downloads:</span> %1$s"
 msgstr ""
 
-#: includes/widgets.php:162
+#: includes/widgets.php:165
 msgid "<span class=\"edd-download-info-updated\">Updated:</span>"
 msgstr ""
 
-#: includes/widgets.php:212
+#: includes/widgets.php:216
 msgid "Download info"
 msgstr ""
 
-#: includes/widgets.php:223 includes/widgets.php:384
+#: includes/widgets.php:228 includes/widgets.php:394
 msgid "Title:"
 msgstr ""
 
-#: includes/widgets.php:229
+#: includes/widgets.php:234
 msgid "Show Feature Image?"
 msgstr ""
 
-#: includes/widgets.php:234
+#: includes/widgets.php:239
 msgid "Show purchase link in button?"
 msgstr ""
 
-#: includes/widgets.php:239
+#: includes/widgets.php:244
 msgid "Show demo link in button?"
 msgstr ""
 
-#: includes/widgets.php:265
+#: includes/widgets.php:249
+msgid "Open demo link in a new window?"
+msgstr ""
+
+#: includes/widgets.php:275
 msgid "Display the downloads features."
 msgstr ""
 
-#: includes/widgets.php:278 includes/widgets.php:375
+#: includes/widgets.php:288 includes/widgets.php:385
 msgid "Download Features"
 msgstr ""
 
-#: includes/widgets.php:390
+#: includes/widgets.php:400
 msgid "Show features as links?"
 msgstr ""
