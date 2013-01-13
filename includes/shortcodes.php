@@ -28,12 +28,10 @@ function edd_download_info_link_shortcode( $atts, $content = null ) {
 	);
 	
 	/* By default link opens in new window. */
-	if ( $open == 'yes' ) {
+	if ( 'yes' == $open  )
 		$open = '_blank';
-	}
-	else {
+	else
 		$open = '_self';
-	}
 	
 	$edd_download_info_link = sprintf( 
 			'<a href="%1$s" class="%2$s %3$s" title="' . esc_attr( $text ) . '" target="%4$s">' . esc_attr( $text ) . '</a>', 
