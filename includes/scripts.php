@@ -27,7 +27,7 @@ function edd_download_info_load_admin_scripts( $hook ) {
 		);
 
 		$ui_style = ( 'classic' == get_user_option( 'admin_color' ) ) ? 'classic' : 'fresh';
-		wp_enqueue_style( 'jquery-ui-css', EDD_PLUGIN_URL . 'includes/css/jquery-ui-' . $ui_style . '.css' );
+		wp_enqueue_style( 'jquery-ui-css', trailingslashit( EDD_PLUGIN_URL ) . 'assets/css/jquery-ui-' . $ui_style . '.css' );
 	}
 	
 }
