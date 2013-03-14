@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: EDD Download Info\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-20 14:08+0200\n"
-"PO-Revision-Date: 2013-01-20 14:09+0200\n"
+"POT-Creation-Date: 2013-03-14 16:47+0200\n"
+"PO-Revision-Date: 2013-03-14 16:47+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: en\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;esc_attr__;esc_attr_e;"
 "esc_html__;esc_html_e;_n;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: ../\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: includes/metabox.php:17 includes/widgets.php:33
@@ -128,38 +128,42 @@ msgstr ""
 msgid "<span class=\"edd-download-info-updated\">Updated:</span>"
 msgstr ""
 
-#: includes/widgets.php:216
+#: includes/widgets.php:217
 msgid "Download info"
 msgstr ""
 
-#: includes/widgets.php:228 includes/widgets.php:394
+#: includes/widgets.php:230 includes/widgets.php:401
 msgid "Title:"
 msgstr ""
 
-#: includes/widgets.php:234
+#: includes/widgets.php:236
 msgid "Show Feature Image?"
 msgstr ""
 
-#: includes/widgets.php:239
+#: includes/widgets.php:241
 msgid "Show purchase link in button?"
 msgstr ""
 
-#: includes/widgets.php:244
+#: includes/widgets.php:246
 msgid "Show demo link in button?"
 msgstr ""
 
-#: includes/widgets.php:249
+#: includes/widgets.php:251
 msgid "Open demo link in a new window?"
 msgstr ""
 
-#: includes/widgets.php:275
+#: includes/widgets.php:256
+msgid "Show download count?"
+msgstr ""
+
+#: includes/widgets.php:282
 msgid "Display the downloads features."
 msgstr ""
 
-#: includes/widgets.php:288 includes/widgets.php:385
+#: includes/widgets.php:295 includes/widgets.php:392
 msgid "Download Features"
 msgstr ""
 
-#: includes/widgets.php:400
+#: includes/widgets.php:407
 msgid "Show features as links?"
 msgstr ""
