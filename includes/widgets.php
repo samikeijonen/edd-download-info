@@ -74,7 +74,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		}
 		
 		/* If there is no feature image, purchase link, demo, support, doc link, download count or updated date, get out of here. */
-		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && empty( $download_count ) && empty( $download_updated_date ) )
+		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && ( !$instance['show_download_count'] || empty( $download_count ) ) && empty( $download_updated_date ) )
 			return false;
 
 		/* Open the before widget HTML. */
@@ -153,7 +153,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		<?php }
 		
 		/* If download_count is set, echo it. */
-		if ( !empty( $download_count ) ) { ?>
+		if ( !empty( $download_count ) && $instance['show_download_count'] ) { ?>
 			
 			<li><?php printf( __( '<span class="edd-download-info-download">Downloads:</span> %1$s', 'edd-download-info' ), $download_count ); ?></li>
 		
@@ -199,6 +199,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		$instance['show_purchase_link'] = strip_tags( $new_instance['show_purchase_link'] );
 		$instance['show_demo_link'] = strip_tags( $new_instance['show_demo_link'] );
 		$instance['open_demo_link'] = strip_tags( $new_instance['open_demo_link'] );
+		$instance['show_download_count'] = strip_tags( $new_instance['show_download_count'] );
 		
 		return $instance;
 		
@@ -217,7 +218,8 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			'show_feature_image' => 1,
 			'show_purchase_link' => 1,
 			'show_demo_link' => 1,
-			'open_demo_link' => 1
+			'open_demo_link' => 1,
+			'show_download_count' => 1
 		) );
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -247,6 +249,11 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			<p>
 				<input type="checkbox" value="1" <?php checked( '1', $instance['open_demo_link'] ); ?> id="<?php echo $this->get_field_id( 'open_demo_link' ); ?>" name="<?php echo $this->get_field_name( 'open_demo_link' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'open_demo_link' ); ?>"><?php _e( 'Open demo link in a new window?', 'edd-download-info' ); ?></label> 
+			</p>
+			
+			<p>
+				<input type="checkbox" value="1" <?php checked( '1', $instance['show_download_count'] ); ?> id="<?php echo $this->get_field_id( 'show_download_count' ); ?>" name="<?php echo $this->get_field_name( 'show_download_count' ); ?>" />
+				<label for="<?php echo $this->get_field_id( 'show_download_count' ); ?>"><?php _e( 'Show download count?', 'edd-download-info' ); ?></label> 
 			</p>
 			
 		<div style="clear:both;">&nbsp;</div>
