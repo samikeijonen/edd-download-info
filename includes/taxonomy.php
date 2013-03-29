@@ -5,12 +5,17 @@
  * Registers the custom taxonomy download features.
  *
  * @since 0.1.0
-
 */
 
 add_action( 'init', 'edd_download_info_taxonomies' );
 
 function edd_download_info_taxonomies() {
+
+	$slug = 'downloads';
+	if ( defined( 'EDD_SLUG' ) ) {
+		$slug = EDD_SLUG;
+	}
+
 	$feature_labels = array(
 		'name' 				=> _x( 'Download Features', 'taxonomy general name', 'edd-download-info' ),
 		'singular_name' 	=> _x( 'Feature', 'taxonomy singular name', 'edd-download-info' ),
@@ -30,7 +35,7 @@ function edd_download_info_taxonomies() {
 			'labels' 		=> apply_filters( 'edd_download_info_feature_labels', $feature_labels ),
 			'show_ui' 		=> true,
 			'query_var' 	=> 'download_feature',
-			'rewrite' 		=> array( 'slug' => 'downloads/feature' )
+			'rewrite' 		=> array( 'slug' => $slug . '/feature' )
 		)
 	);
 
