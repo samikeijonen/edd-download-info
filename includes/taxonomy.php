@@ -12,9 +12,8 @@ add_action( 'init', 'edd_download_info_taxonomies' );
 function edd_download_info_taxonomies() {
 
 	$slug = 'downloads';
-	if ( defined( 'EDD_SLUG' ) ) {
+	if ( defined( 'EDD_SLUG' ) )
 		$slug = EDD_SLUG;
-	}
 
 	$feature_labels = array(
 		'name' 				=> _x( 'Download Features', 'taxonomy general name', 'edd-download-info' ),
