@@ -195,11 +195,11 @@ class EDD_Download_Info_Widget extends WP_Widget {
 
 		/* Strip tags from elements that don't need them. */
 		$instance['title'] = strip_tags( $new_instance['title'] );
-		$instance['show_feature_image'] = strip_tags( $new_instance['show_feature_image'] );
-		$instance['show_purchase_link'] = strip_tags( $new_instance['show_purchase_link'] );
-		$instance['show_demo_link'] = strip_tags( $new_instance['show_demo_link'] );
-		$instance['open_demo_link'] = strip_tags( $new_instance['open_demo_link'] );
-		$instance['show_download_count'] = strip_tags( $new_instance['show_download_count'] );
+		$instance['show_feature_image'] = isset( $new_instance['show_feature_image'] ) ? strip_tags( $new_instance['show_feature_image'] ) : '';
+		$instance['show_purchase_link'] = isset( $new_instance['show_purchase_link'] ) ? strip_tags( $new_instance['show_purchase_link'] ) : '';
+		$instance['show_demo_link'] = isset( $new_instance['show_demo_link'] ) ? strip_tags( $new_instance['show_demo_link'] ) : '';
+		$instance['open_demo_link'] = isset( $new_instance['open_demo_link'] ) ? strip_tags( $new_instance['open_demo_link'] ) : '';
+		$instance['show_download_count'] = isset( $new_instance['show_download_count'] ) ? strip_tags( $new_instance['show_download_count'] ) : '';
 		
 		return $instance;
 		
