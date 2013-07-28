@@ -18,7 +18,7 @@ function edd_download_info_load_admin_scripts( $hook ) {
 
 	if( ( $hook == 'post.php' || $hook == 'post-new.php' ) && $post->post_type == 'download' ) {
 		/* Add datepicker. */
-		wp_enqueue_script( 'edd-download-info-datepicker-settings', EDD_DOWNLOAD_INFO_URL . 'js/admin-scripts.js', array( 'jquery-ui-datepicker' ), EDD_DOWNLOAD_INFO_VERSION, true );
+		wp_enqueue_script( 'edd-download-info-datepicker-settings', EDD_DOWNLOAD_INFO_URL . 'js/admin-scripts.js', array( 'jquery-ui-datepicker' ), '20130723', true );
 		
 		/* Localize dateformat. @link: http://pippinsplugins.com/use-wp_localize_script-it-is-awesome */
 		wp_localize_script( 'edd-download-info-datepicker-settings', 'datepicker_settings_vars', array(
