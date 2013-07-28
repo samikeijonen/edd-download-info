@@ -20,18 +20,18 @@ function edd_download_info_purchase_demo_link() {
 	
 	if ( ! edd_item_in_cart( get_the_ID() ) ) {
 		if ( edd_has_variable_prices( get_the_ID() ) ) {
-			echo '<a href="' . get_permalink() . '" class="'. $style . ' ' . $color . ' edd-submit">' . __( 'View Details:', 'eino' ) . ' ' . eino_edd_the_price( get_the_ID() ) . '</a>';
+			echo '<div class="edd-download-info-purchase-link"><a href="' . get_permalink() . '" class="'. $style . ' ' . $color . ' edd-submit">' . __( 'View Details:', 'eino' ) . ' ' . eino_edd_the_price( get_the_ID() ) . '</a></div>';
 			} else {
-			echo do_shortcode( '[purchase_link id="' . get_the_ID() . '" text="' . __( 'Add To Cart', 'eino' ) . '" style="'. $style . ' ' . $color . ' edd-submit"]' );
+			echo '<div class="edd-download-info-purchase-link">' . do_shortcode( '[purchase_link id="' . get_the_ID() . '" text="' . __( 'Add To Cart', 'eino' ) . '" style="'. $style . ' ' . $color . ' edd-submit"]' ) . '</div>';
 				}
 		} else {
-			echo '<a href="' . get_permalink( $edd_options['purchase_page'] ) . '" class="'. $style . ' ' . $color . ' edd-submit edd_go_to_checkout">' . __( 'Checkout', 'eino' ) . '</a>';
+			echo '<div class="edd-download-info-purchase-link"><a href="' . get_permalink( $edd_options['purchase_page'] ) . '" class="'. $style . ' ' . $color . ' edd-submit edd_go_to_checkout">' . __( 'Checkout', 'eino' ) . '</a></div>';
 		}
 		
 	/* If demo link is set, echo it. */
 	if ( !empty( $download_demo_link ) ) { ?> 
 		
-		<a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>" class="<?php echo $style . ' ' . $color . ' edd-submit'; ?>" target=""><?php _e( 'Demo', 'edd-download-info' ); ?></a>
+		<div class="edd-download-info-demo-link"><a href="<?php echo $download_demo_link; ?>" title="<?php _e( 'Demo', 'edd-download-info' ); ?>" class="<?php echo $style . ' ' . $color . ' edd-submit'; ?>" target=""><?php _e( 'Demo', 'edd-download-info' ); ?></a></div>
 		
 	<?php }
 
