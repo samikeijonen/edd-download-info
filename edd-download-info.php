@@ -84,6 +84,7 @@ class EDD_Download_Info {
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'settings.php' );
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'shortcodes.php' );
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'scripts.php' );
+		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'functions.php' );
 		
 	}
 
