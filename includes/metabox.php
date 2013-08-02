@@ -48,6 +48,12 @@ function edd_download_info_class_meta_box( $object, $box ) { ?>
 	</p>
 	
 	<p>
+		<label for="download_repo_link"><?php _e( "Add repository URL.", 'edd-download-info' ); ?></label>
+		<br />
+		<input class="widefat" type="text" name="download_repo_link" id="download_repo_link" value="<?php echo esc_attr( get_post_meta( $object->ID, '_download_repo_link', true ) ); ?>" size="30" />
+	</p>
+	
+	<p>
 		<label for="download_updated_date"><?php _e( "Add updated date.", 'edd-download-info' ); ?></label>
 		<br />
 		<?php $download_updated_date = get_post_meta( $object->ID, '_download_updated_date', true ); ?>
@@ -85,7 +91,8 @@ function edd_download_info_save_meta_boxes( $post_id, $post ) {
 	$download_meta_info_all = apply_filters( 'edd_download_info_metabox_fields_save', array(
 			'download_demo_link',
 			'download_support_link', 
-			'download_doc_link' 
+			'download_doc_link',
+			'download_repo_link'
 		)
 	);
 	
