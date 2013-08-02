@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: EDD Download Info\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-14 16:47+0200\n"
-"PO-Revision-Date: 2013-03-14 16:48+0200\n"
+"POT-Creation-Date: 2013-08-02 11:37+0200\n"
+"PO-Revision-Date: 2013-08-02 11:40+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -13,8 +13,25 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;esc_attr__;esc_attr_e;"
 "esc_html__;esc_html_e;_n;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: ../\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: includes/functions.php:23
+msgid "View Details:"
+msgstr "Näytä lisää:"
+
+#: includes/functions.php:25
+msgid "Add To Cart"
+msgstr "Lisää ostoskoriin"
+
+#: includes/functions.php:28
+msgid "Checkout"
+msgstr "Kassalle"
+
+#: includes/functions.php:34 includes/functions.php:61
+#: includes/widgets.php:117 includes/widgets.php:133
+msgid "Demo"
+msgstr "Demo"
 
 #: includes/metabox.php:17 includes/widgets.php:33
 msgid "Download Info"
@@ -33,10 +50,14 @@ msgid "Add document URL."
 msgstr "Lisää dokumentaation URL."
 
 #: includes/metabox.php:51
+msgid "Add repository URL."
+msgstr "Lisää github/svn URL."
+
+#: includes/metabox.php:57
 msgid "Add updated date."
 msgstr "Lisää päivityksen päivämäärä."
 
-#: includes/metabox.php:54
+#: includes/metabox.php:60
 msgid "m/d/y"
 msgstr "m/d/y"
 
@@ -52,49 +73,49 @@ msgstr "Valitse demolinkin värityyli"
 msgid "Download"
 msgstr "Lataus"
 
-#: includes/taxonomy.php:15
+#: includes/taxonomy.php:19
 msgctxt "taxonomy general name"
 msgid "Download Features"
 msgstr "Latauksien ominaisuudet"
 
-#: includes/taxonomy.php:16
+#: includes/taxonomy.php:20
 msgctxt "taxonomy singular name"
 msgid "Feature"
 msgstr "Ominaisuudet"
 
-#: includes/taxonomy.php:17
+#: includes/taxonomy.php:21
 msgid "Search Features"
 msgstr "Etsi ominaisuuksia"
 
-#: includes/taxonomy.php:18
+#: includes/taxonomy.php:22
 msgid "All Features"
 msgstr "Kaikki ominaisuudet"
 
-#: includes/taxonomy.php:19
+#: includes/taxonomy.php:23
 msgid "Parent Feature"
 msgstr "Ylemmän tason ominaisuus"
 
-#: includes/taxonomy.php:20
+#: includes/taxonomy.php:24
 msgid "Parent Feature:"
 msgstr "Ylemmän tason ominaisuus:"
 
-#: includes/taxonomy.php:21
+#: includes/taxonomy.php:25
 msgid "Edit Features"
 msgstr "Editoi ominaisuuksia"
 
-#: includes/taxonomy.php:22
+#: includes/taxonomy.php:26
 msgid "Update Feature"
 msgstr "Päivitä ominaisuus"
 
-#: includes/taxonomy.php:23
+#: includes/taxonomy.php:27
 msgid "Add New Feature"
 msgstr "Lisää uusi ominaisuus"
 
-#: includes/taxonomy.php:24
+#: includes/taxonomy.php:28
 msgid "New Feature Name"
 msgstr "Uuden ominaisuuden nimi"
 
-#: includes/taxonomy.php:25
+#: includes/taxonomy.php:29
 msgid "Features"
 msgstr "Ominaisuudet"
 
@@ -102,69 +123,69 @@ msgstr "Ominaisuudet"
 msgid "Display download info."
 msgstr "Näytä latauksien info."
 
-#: includes/widgets.php:114 includes/widgets.php:130
-msgid "Demo"
-msgstr "Demo"
-
-#: includes/widgets.php:137
+#: includes/widgets.php:140
 msgid "Support"
 msgstr "Tuki"
 
-#: includes/widgets.php:144
+#: includes/widgets.php:147
 msgid "Documentation"
 msgstr "Dokumentaatio"
 
-#: includes/widgets.php:151
+#: includes/widgets.php:154
+msgid "Repository"
+msgstr "Github"
+
+#: includes/widgets.php:161
 #, php-format
 msgid "<span class=\"edd-download-info-version\">Version:</span> %1$s"
 msgstr "<span class=\"edd-download-info-version\">Versio:</span> %1$s"
 
-#: includes/widgets.php:158
+#: includes/widgets.php:168
 #, php-format
 msgid "<span class=\"edd-download-info-download\">Downloads:</span> %1$s"
 msgstr "<span class=\"edd-download-info-download\">Lataukset:</span> %1$s"
 
-#: includes/widgets.php:165
+#: includes/widgets.php:175
 msgid "<span class=\"edd-download-info-updated\">Updated:</span>"
 msgstr "<span class=\"edd-download-info-updated\">Päivitetty:</span>"
 
-#: includes/widgets.php:217
+#: includes/widgets.php:227
 msgid "Download info"
 msgstr "Latauksien info"
 
-#: includes/widgets.php:230 includes/widgets.php:401
+#: includes/widgets.php:240 includes/widgets.php:411
 msgid "Title:"
 msgstr "Otsikko:"
 
-#: includes/widgets.php:236
+#: includes/widgets.php:246
 msgid "Show Feature Image?"
 msgstr "Näytä artikkelikuva?"
 
-#: includes/widgets.php:241
+#: includes/widgets.php:251
 msgid "Show purchase link in button?"
 msgstr "Näytä ostoksen linkki painikkeena?"
 
-#: includes/widgets.php:246
+#: includes/widgets.php:256
 msgid "Show demo link in button?"
 msgstr "Näytä demolinkki painikkeena?"
 
-#: includes/widgets.php:251
+#: includes/widgets.php:261
 msgid "Open demo link in a new window?"
 msgstr "Avaa demolinkki uudessa ikkunassa?"
 
-#: includes/widgets.php:256
+#: includes/widgets.php:266
 msgid "Show download count?"
 msgstr "Näytä latauksien lukumäärä?"
 
-#: includes/widgets.php:282
+#: includes/widgets.php:292
 msgid "Display the downloads features."
 msgstr "Näytä latauksien ominaisuudet."
 
-#: includes/widgets.php:295 includes/widgets.php:392
+#: includes/widgets.php:305 includes/widgets.php:402
 msgid "Download Features"
 msgstr "Latauksien ominaisuudet"
 
-#: includes/widgets.php:407
+#: includes/widgets.php:417
 msgid "Show features as links?"
 msgstr "Näytä ominaisuudet linkkeinä?"
 
