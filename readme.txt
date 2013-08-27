@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: EDD, download, downloads, add-on, digital, easy 
 Requires at least: 3.4
 Tested up to: 3.6
-Stable tag: 0.1.5.2
+Stable tag: 0.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,10 +76,15 @@ I needed this feature and someone else might need it too.
 
 == Changelog ==
 
+= 0.1.6 =
+
+* Changelog link added in metabox.
+* Language files updated.
+* Taxonomy download feature register fire at priority 0. It was having 404 page.
+
 = 0.1.5.2 =
 
 * Repository link added in metabox. This is useful for free products.
-
 * Language files updated.
 
 = 0.1.5.1 =
@@ -89,7 +94,6 @@ I needed this feature and someone else might need it too.
 = 0.1.5 =
 
 * Add purchase and demo link functions what themes can use.
-
 * You can now put translation files also to `/wp-content/languages/edd-download-info` folder. This is the same idea and code
 what is used in Easy Digital Download Plugin.
 
