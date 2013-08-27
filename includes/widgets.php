@@ -64,6 +64,9 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		
 		/* Get repository link. */
 		$download_repo_link = get_post_meta( $id, '_download_repo_link', true );
+		
+		/* Get changelog link. */
+		$download_changelog_link = get_post_meta( $id, '_download_changelog_link', true );
 
 		/* Get updated date. */
 		$download_updated_date = get_post_meta( $id, '_download_updated_date', true );
@@ -77,7 +80,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		}
 		
 		/* If there is no feature image, purchase link, demo, support, doc link, download count or updated date, get out of here. */
-		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && empty( $download_repo_link ) && ( !$instance['show_download_count'] || empty( $download_count ) ) && empty( $download_updated_date ) )
+		if ( !( $instance['show_feature_image'] && has_post_thumbnail( $id ) ) && !$instance['show_purchase_link'] && ( !$instance['show_demo_link'] || empty( $download_demo_link ) ) && empty( $download_demo_link ) && empty( $download_support_link ) && empty( $download_doc_link ) && empty( $download_repo_link ) && empty( $download_changelog_link ) && ( !$instance['show_download_count'] || empty( $download_count ) ) && empty( $download_updated_date ) )
 			return false;
 
 		/* Open the before widget HTML. */
@@ -152,6 +155,13 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		if ( !empty( $download_repo_link ) ) { ?>
 			
 			<li><a href="<?php echo $download_repo_link; ?>" title="<?php _e( 'Repository', 'edd-download-info' ); ?>"><?php _e( 'Repository', 'edd-download-info' ); ?></a></li>
+		
+		<?php }
+		
+		/* If changelog link is set, echo it. */
+		if ( !empty( $download_changelog_link ) ) { ?>
+			
+			<li><a href="<?php echo $download_changelog_link; ?>" title="<?php _e( 'Changelog', 'edd-download-info' ); ?>"><?php _e( 'Changelog', 'edd-download-info' ); ?></a></li>
 		
 		<?php }
 		
