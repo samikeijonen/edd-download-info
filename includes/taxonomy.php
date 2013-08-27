@@ -7,7 +7,7 @@
  * @since 0.1.0
 */
 
-add_action( 'init', 'edd_download_info_taxonomies' );
+add_action( 'init', 'edd_download_info_taxonomies', 0 );
 
 function edd_download_info_taxonomies() {
 
