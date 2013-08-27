@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: EDD Download Info\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-02 11:37+0200\n"
-"PO-Revision-Date: 2013-08-02 11:40+0200\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/edd-download-info\n"
+"POT-Creation-Date: 2013-08-27 14:39:02+00:00\n"
+"PO-Revision-Date: 2013-08-27 17:41+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -29,7 +29,7 @@ msgid "Checkout"
 msgstr "Kassalle"
 
 #: includes/functions.php:34 includes/functions.php:61
-#: includes/widgets.php:117 includes/widgets.php:133
+#: includes/widgets.php:120 includes/widgets.php:136
 msgid "Demo"
 msgstr "Demo"
 
@@ -54,10 +54,14 @@ msgid "Add repository URL."
 msgstr "Lisää github/svn URL."
 
 #: includes/metabox.php:57
+msgid "Add changelog URL."
+msgstr "Lisää muutoslokin URL."
+
+#: includes/metabox.php:63
 msgid "Add updated date."
 msgstr "Lisää päivityksen päivämäärä."
 
-#: includes/metabox.php:60
+#: includes/metabox.php:66
 msgid "m/d/y"
 msgstr "m/d/y"
 
@@ -123,71 +127,94 @@ msgstr "Ominaisuudet"
 msgid "Display download info."
 msgstr "Näytä latauksien info."
 
-#: includes/widgets.php:140
+#: includes/widgets.php:143
 msgid "Support"
 msgstr "Tuki"
 
-#: includes/widgets.php:147
+#: includes/widgets.php:150
 msgid "Documentation"
 msgstr "Dokumentaatio"
 
-#: includes/widgets.php:154
+#: includes/widgets.php:157
 msgid "Repository"
 msgstr "Github"
 
-#: includes/widgets.php:161
-#, php-format
+#: includes/widgets.php:164
+msgid "Changelog"
+msgstr "Muutosloki"
+
+#: includes/widgets.php:171
 msgid "<span class=\"edd-download-info-version\">Version:</span> %1$s"
 msgstr "<span class=\"edd-download-info-version\">Versio:</span> %1$s"
 
-#: includes/widgets.php:168
-#, php-format
+#: includes/widgets.php:178
 msgid "<span class=\"edd-download-info-download\">Downloads:</span> %1$s"
 msgstr "<span class=\"edd-download-info-download\">Lataukset:</span> %1$s"
 
-#: includes/widgets.php:175
+#: includes/widgets.php:185
 msgid "<span class=\"edd-download-info-updated\">Updated:</span>"
 msgstr "<span class=\"edd-download-info-updated\">Päivitetty:</span>"
 
-#: includes/widgets.php:227
+#: includes/widgets.php:237
 msgid "Download info"
 msgstr "Latauksien info"
 
-#: includes/widgets.php:240 includes/widgets.php:411
+#: includes/widgets.php:250 includes/widgets.php:421
 msgid "Title:"
 msgstr "Otsikko:"
 
-#: includes/widgets.php:246
+#: includes/widgets.php:256
 msgid "Show Feature Image?"
 msgstr "Näytä artikkelikuva?"
 
-#: includes/widgets.php:251
+#: includes/widgets.php:261
 msgid "Show purchase link in button?"
 msgstr "Näytä ostoksen linkki painikkeena?"
 
-#: includes/widgets.php:256
+#: includes/widgets.php:266
 msgid "Show demo link in button?"
 msgstr "Näytä demolinkki painikkeena?"
 
-#: includes/widgets.php:261
+#: includes/widgets.php:271
 msgid "Open demo link in a new window?"
 msgstr "Avaa demolinkki uudessa ikkunassa?"
 
-#: includes/widgets.php:266
+#: includes/widgets.php:276
 msgid "Show download count?"
 msgstr "Näytä latauksien lukumäärä?"
 
-#: includes/widgets.php:292
+#: includes/widgets.php:302
 msgid "Display the downloads features."
 msgstr "Näytä latauksien ominaisuudet."
 
-#: includes/widgets.php:305 includes/widgets.php:402
+#: includes/widgets.php:315 includes/widgets.php:412
 msgid "Download Features"
 msgstr "Latauksien ominaisuudet"
 
-#: includes/widgets.php:417
+#: includes/widgets.php:427
 msgid "Show features as links?"
 msgstr "Näytä ominaisuudet linkkeinä?"
+
+#. Plugin Name of the plugin/theme
+msgid "EDD Download Info"
+msgstr "EDD Download Info"
+
+#. Plugin URI of the plugin/theme
+msgid "https://foxnet-themes.fi/downloads/edd-download-info/"
+msgstr "https://foxnet-themes.fi/downloads/edd-download-info/"
+
+#. Description of the plugin/theme
+msgid "Adds download info metabox and widget to Easy Digital Downloads."
+msgstr ""
+"Lisää vimpaimen ja muita ominaisuuksia Easy Digital Downloads -lisäosaan."
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr "Sami Keijonen"
+
+#. Author URI of the plugin/theme
+msgid "https://foxnet-themes.fi"
+msgstr ""
 
 #~ msgid "Version: %1$s"
 #~ msgstr "Versio: %1$s"
