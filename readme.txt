@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: EDD, download, downloads, add-on, digital, easy 
 Requires at least: 3.4
 Tested up to: 3.6
-Stable tag: 0.1.6
+Stable tag: 0.1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,10 @@ I needed this feature and someone else might need it too.
 4. Download Features Widget
 
 == Changelog ==
+
+= 0.1.7 =
+
+* Update demo link color setting.
 
 = 0.1.6 =
 
