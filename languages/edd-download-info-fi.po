@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: EDD Download Info\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/edd-download-info\n"
 "POT-Creation-Date: 2013-08-27 14:39:02+00:00\n"
-"PO-Revision-Date: 2013-08-27 17:41+0200\n"
+"PO-Revision-Date: 2014-04-17 20:45+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;esc_attr__;esc_attr_e;"
 "esc_html__;esc_html_e;_n;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: ../\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: includes/functions.php:23
@@ -214,10 +214,4 @@ msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
 msgid "https://foxnet-themes.fi"
-msgstr ""
-
-#~ msgid "Version: %1$s"
-#~ msgstr "Versio: %1$s"
-
-#~ msgid "Downloads: %1$s"
-#~ msgstr "Latauksia: %1$s"
+msgstr "https://foxnet-themes.fi"
