@@ -3,7 +3,9 @@
 * Plugin Name: EDD Download Info
 * Plugin URI: https://foxnet-themes.fi/downloads/edd-download-info/
 * Description: Adds download info metabox and widget to Easy Digital Downloads.
-* Version: 0.1.7
+* Version: 0.1.8
+* Text Domain: edd-download-info
+* Domain Path: /languages
 * Author: Sami Keijonen
 * Author URI: https://foxnet-themes.fi
 *
@@ -15,9 +17,9 @@
 * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 *
 * @package EDDDownloadInfo
-* @version 0.1.7
+* @version 0.1.8
 * @author Sami Keijonen <sami.keijonen@foxnet.fi>
-* @copyright Copyright (c) 2012, Sami Keijonen
+* @copyright Copyright (c) 2014, Sami Keijonen
 * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
 
@@ -67,7 +69,7 @@ class EDD_Download_Info {
 	public function i18n() {
 
 		/* Load the translation of the plugin. */
-		load_plugin_textdomain( 'edd-download-info', false, 'edd-download-info/languages' );
+		load_plugin_textdomain( 'edd-download-info', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	}
 
