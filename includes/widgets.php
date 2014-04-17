@@ -54,25 +54,25 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		$id = $wp_query->get_queried_object_id();
 		
 		/* Get download demo link. */
-		$download_demo_link = get_post_meta( $id, '_download_demo_link', true );
+		$download_demo_link = esc_url( get_post_meta( $id, '_download_demo_link', true ) );
 		
 		/* Get support forum link. */
-		$download_support_link = get_post_meta( $id, '_download_support_link', true );
+		$download_support_link = esc_url( get_post_meta( $id, '_download_support_link', true ) );
 		
 		/* Get documentation link. */
-		$download_doc_link = get_post_meta( $id, '_download_doc_link', true );
+		$download_doc_link = esc_url( get_post_meta( $id, '_download_doc_link', true ) );
 		
 		/* Get repository link. */
-		$download_repo_link = get_post_meta( $id, '_download_repo_link', true );
+		$download_repo_link = esc_url( get_post_meta( $id, '_download_repo_link', true ) );
 		
 		/* Get changelog link. */
-		$download_changelog_link = get_post_meta( $id, '_download_changelog_link', true );
+		$download_changelog_link = esc_url( get_post_meta( $id, '_download_changelog_link', true ) );
 
 		/* Get updated date. */
-		$download_updated_date = get_post_meta( $id, '_download_updated_date', true );
+		$download_updated_date = esc_attr( get_post_meta( $id, '_download_updated_date', true ) );
 		
 		/* Get version number from EDD version or EDD Software Licence Plugin. */
-		$version = get_post_meta( $id, '_edd_sl_version', true );
+		$version = esc_attr( get_post_meta( $id, '_edd_sl_version', true ) );
 		
 		/* Get download count. */
 		if( function_exists( 'edd_get_download_sales_stats' ) ) {
@@ -112,7 +112,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		$style = isset( $edd_options[ 'button_style' ] ) ? $edd_options[ 'button_style' ] : 'button';
 		
 		/* Open demo link in a new window or not. */
-		$open = $instance['open_demo_link'] ? '_blank' : '_self';
+		$open = isset( $instance['open_demo_link'] ) && $instance['open_demo_link'] ? '_blank' : '_self';
 		
 		/* If demo link is set, echo it. */
 		if ( $instance['show_demo_link'] && !empty( $download_demo_link ) ) { ?> 
