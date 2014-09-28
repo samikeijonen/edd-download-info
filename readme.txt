@@ -2,9 +2,9 @@
 Contributors: sami.keijonen
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E65RCFVD3QGYU
 Tags: EDD, download, downloads, add-on, digital, easy 
-Requires at least: 3.8
-Tested up to: 3.9
-Stable tag: 0.1.8
+Requires at least: 3.9
+Tested up to: 4.0
+Stable tag: 0.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,12 @@ I needed this feature and someone else might need it too.
 4. Download Features Widget
 
 == Changelog ==
+
+= 0.1.9 =
+
+* Tested up to 4.0.
+* Better security for plugin files.
+* Update plugin URL to foxland.fi.
 
 = 0.1.8 =
 
