@@ -1,13 +1,13 @@
 <?php
 /**
 * Plugin Name: EDD Download Info
-* Plugin URI: https://foxnet-themes.fi/downloads/edd-download-info/
+* Plugin URI: https://foxland.fi/downloads/edd-download-info/
 * Description: Adds download info metabox and widget to Easy Digital Downloads.
-* Version: 0.1.8
+* Version: 0.1.9
 * Text Domain: edd-download-info
 * Domain Path: /languages
 * Author: Sami Keijonen
-* Author URI: https://foxnet-themes.fi
+* Author URI: https://foxland.fi
 *
 * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
 * General Public License version 2, as published by the Free Software Foundation. You may NOT assume
@@ -17,29 +17,43 @@
 * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 *
 * @package EDDDownloadInfo
-* @version 0.1.8
+* @version 0.1.9
 * @author Sami Keijonen <sami.keijonen@foxnet.fi>
 * @copyright Copyright (c) 2014, Sami Keijonen
 * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 */
 
-class EDD_Download_Info {
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+final class EDD_Download_Info {
+
+	/**
+	 * Holds the instances of this class.
+	 *
+	 * @since  0.1.9
+	 * @access private
+	 * @var    object
+	 */
+	private static $instance;
 
 	/**
 	* PHP5 constructor method.
 	*
-	* @since 0.1.0
+	* @since  0.0.1
+	* @access public
+	* @var    void
 	*/
 	public function __construct() {
 
 		/* Set the constants needed by the plugin. */
-		add_action( 'plugins_loaded', array( &$this, 'constants' ), 1 );
+		add_action( 'plugins_loaded', array( $this, 'constants' ), 1 );
 
 		/* Internationalize the text strings used. */
-		add_action( 'plugins_loaded', array( &$this, 'i18n' ), 2 );
+		add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
 
 		/* Load the functions files. */
-		add_action( 'plugins_loaded', array( &$this, 'includes' ), 3 );
+		add_action( 'plugins_loaded', array( $this, 'includes' ), 3 );
 
 	}
 
@@ -89,9 +103,23 @@ class EDD_Download_Info {
 		require_once( EDD_DOWNLOAD_INFO_INCLUDES . 'functions.php' );
 		
 	}
+	
+	/**
+	 * Returns the instance.
+	 *
+	 * @since  0.1.9
+	 * @access public
+	 * @return object
+	 */
+	public static function get_instance() {
+
+		if ( !self::$instance ) {
+			self::$instance = new self;
+		}
+		
+		return self::$instance;
+	}
 
 }
 
-new EDD_Download_Info();
-
-?>
+EDD_Download_Info::get_instance();
