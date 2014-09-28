@@ -8,6 +8,9 @@
  * @since     0.1.0
 */
 
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function edd_download_info_purchase_demo_link() {
 
 	/* Get download demo link. */
@@ -139,5 +142,3 @@ if ( ! function_exists( 'edd_download_info_sort_prices_by' ) ) {
         array_multisort( $sort_col, SORT_ASC, $arr );
     }
 }
-
-?>

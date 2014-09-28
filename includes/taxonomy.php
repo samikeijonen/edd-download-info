@@ -7,6 +7,9 @@
  * @since 0.1.0
 */
 
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 add_action( 'init', 'edd_download_info_taxonomies', 0 );
 
 function edd_download_info_taxonomies() {
@@ -41,5 +44,3 @@ function edd_download_info_taxonomies() {
 	register_taxonomy( 'edd_download_info_feature', array( 'download' ), $feature_args );
 	
 }
-
-?>

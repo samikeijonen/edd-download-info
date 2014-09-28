@@ -1,5 +1,8 @@
 <?php
 
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /* Add custom meta box for 'download' */
 add_action( 'add_meta_boxes', 'edd_download_info_create_meta_boxes' );
 
@@ -153,5 +156,3 @@ function edd_download_info_save_meta_boxes( $post_id, $post ) {
 		delete_post_meta( $post_id, $meta_key, $meta_value );
 		
 }
-
-?>

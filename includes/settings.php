@@ -1,5 +1,8 @@
 <?php
 
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /* Add demo link style option in settings (Settings >> Style). */
 add_filter( 'edd_settings_styles', 'edd_download_info_add_styles' );
 
@@ -26,5 +29,3 @@ function edd_download_info_add_styles( $settings ) {
 	return array_merge( $settings, $style_settings );
 	
 }
-
-?>

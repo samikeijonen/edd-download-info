@@ -1,5 +1,8 @@
 <?php
 
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /* Add download link shortcode. */
 add_shortcode( 'edd_download_info_link', 'edd_download_info_link_shortcode' );
 
@@ -44,5 +47,3 @@ function edd_download_info_link_shortcode( $atts, $content = null ) {
 	return $edd_download_info_link;
 
 }
-
-?>

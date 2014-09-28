@@ -1,5 +1,8 @@
 <?php
 
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /* Load admin script. */
 add_action( 'admin_enqueue_scripts', 'edd_download_info_load_admin_scripts', 100 );
 
@@ -31,6 +34,3 @@ function edd_download_info_load_admin_scripts( $hook ) {
 	}
 	
 }
-
-
-?>

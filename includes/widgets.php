@@ -5,6 +5,10 @@
  *
  * @since 0.1.0
  */
+
+/* Exit if accessed directly. */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class EDD_Download_Info_Widget extends WP_Widget {
 
 	/**
@@ -447,5 +451,3 @@ function edd_download_info_register_widgets() {
 }
 
 add_action( 'widgets_init', 'edd_download_info_register_widgets' );
-
-?>
