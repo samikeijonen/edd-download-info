@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[edd-download-info.edd-download-info]
+file_filter = languages/edd-download-info-<lang>.po
+source_file = languages/edd-download-info.pot
+source_lang = en_US
+type = PO
