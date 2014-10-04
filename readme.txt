@@ -1,7 +1,7 @@
 === EDD Download Info ===
 Contributors: sami.keijonen
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E65RCFVD3QGYU
-Tags: EDD, download, downloads, add-on, digital, easy 
+Tags: EDD, download, downloads, add-on, digital, easy
 Requires at least: 3.9
 Tested up to: 4.0
 Stable tag: 0.1.9
@@ -21,7 +21,7 @@ This plugin is mainly for WordPress Themes and Plugins shop with some added feat
 
 1. Adds metabox where you can add URL for your demo, document and support site. There is also updated date because this is not normally same as updated date of your download 'post'.
 1. Adds download features (custom taxonomy).
-1. Adds two widgets. One widget is for showing download info like purchase link, demo, document and support site links, version number, download count and updated date. 
+1. Adds two widgets. One widget is for showing download info like purchase link, demo, document and support site links, version number, download count and updated date.
 And another widget is for download features.
 1. Adds shortcode for "Free Download" button. This is for downloads which you want to give away free and host in wordpress.org for example, but still have them on your site as a download.
 
@@ -43,7 +43,7 @@ In Download Info widget you get version number, download count, updated date, de
 
 This plugin register shortcode `[edd_download_info_link]`. This gives you download button with custom link. There are couple of attributes in this shortcode.
 
-1. url: you definitely want to use this because default url link is empty. This is the url you want go when you click this button. 
+1. url: you definitely want to use this because default url link is empty. This is the url you want go when you click this button.
 1. open: By default link opens in new window. If you set attribute to no, link opens in the same window.
 1. text: default text is Download.
 1. style: default style is button.
@@ -55,6 +55,18 @@ Example usage.
 `
 [edd_download_info_link text="Download Free" url="http://wordpress.org/extend/plugins/edd-download-info" color="gray" open="no"]
 `
+= Translations =
+
+EDD Download Info is already translated into those languages:
+* Suomi (Finnish),
+* Français (French),
+* Deutsch (German),
+* Nederlands (Dutch),
+
+You want to translate into more languages, help, or improve a translation?
+Join our [WP-Translations Community](https://www.transifex.com/projects/p/edd-download-info/)
+
+Thanks to all WP-Translations teams members.
 
 == Installation ==
 
