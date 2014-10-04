@@ -64,7 +64,7 @@ EDD Download Info is already translated into those languages:
 * Nederlands (Dutch),
 
 You want to translate into more languages, help, or improve a translation?
-Join our [WP-Translations Community](https://www.transifex.com/projects/p/edd-dowload-info/)
+Join our [WP-Translations Community](https://www.transifex.com/projects/p/edd-download-info/)
 
 Thanks to all WP-Translations teams members.
 
