@@ -144,7 +144,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		/* If suppport forum link is set, echo it. */
 		if ( !empty( $download_support_link ) ) { ?>
 
-			<li><a href="<?php echo $download_support_link; ?>" title="<?php _e( 'Support', 'edd-download-info' ); ?>"><?php _e( 'Support', 'edd-download-info' ); ?></a></li>
+			<li><a href="<?php echo $download_support_link; ?>" class="edd-support-link" title="<?php _e( 'Support', 'edd-download-info' ); ?>"><?php _e( 'Support', 'edd-download-info' ); ?></a></li>
 
 		<?php }
 
