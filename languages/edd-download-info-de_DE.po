@@ -1,32 +1,39 @@
+# Copyright (C) 2014 Sami Keijonen
+# This file is distributed under the same license as the EDD Download Info package.
+# Translators:
+# FxB <fxb@wp-translations.org>, 2014
+# Kolja Nolte <puhbaer3@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: EDD Download Info\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/edd-download-info\n"
-"POT-Creation-Date: 2014-09-28 13:06:20+00:00\n"
-"PO-Revision-Date: 2015-01-08 20:42+0200\n"
+"Project-Id-Version: Edd Download Info\n"
+"Report-Msgid-Bugs-To: https://foxland.fi/\n"
+"POT-Creation-Date: 2014-10-03 21:30:32+00:00\n"
+"PO-Revision-Date: 2015-01-08 21:39+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
-"Language: fi\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/edd-download-info/language/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;esc_attr__;esc_attr_e;"
-"esc_html__;esc_html_e;_n;_x:1,2c;_n:1,2\n"
-"X-Poedit-Basepath: ../\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: includes/functions.php:26
 msgid "View Details:"
-msgstr "Näytä lisää:"
+msgstr "Details einblenden"
 
 #: includes/functions.php:28
 msgid "Add To Cart"
-msgstr "Lisää ostoskoriin"
+msgstr "Zum Warenkorb hinzufügen"
 
 #: includes/functions.php:31
 msgid "Checkout"
-msgstr "Kassalle"
+msgstr "Kasse"
 
 #: includes/functions.php:37 includes/functions.php:64
 #: includes/widgets.php:124 includes/widgets.php:140
@@ -35,155 +42,155 @@ msgstr "Demo"
 
 #: includes/metabox.php:20 includes/widgets.php:37
 msgid "Download Info"
-msgstr "Latauksien info"
+msgstr "Download Info"
 
 #: includes/metabox.php:36
 msgid "Add demo URL."
-msgstr "Lisää demon URL."
+msgstr "Demo-URL hinzufügen."
 
 #: includes/metabox.php:42
 msgid "Add forum support URL."
-msgstr "Lisää tukifoorumin URL."
+msgstr "Forum-Support-URL hinzufügen."
 
 #: includes/metabox.php:48
 msgid "Add document URL."
-msgstr "Lisää dokumentaation URL."
+msgstr "URL zum Dokument hinzufügen."
 
 #: includes/metabox.php:54
 msgid "Add repository URL."
-msgstr "Lisää github/svn URL."
+msgstr "Repository-URL hinzufügen."
 
 #: includes/metabox.php:60
 msgid "Add changelog URL."
-msgstr "Lisää muutoslokin URL."
+msgstr "Changelog-URL hinzufügen."
 
 #: includes/metabox.php:66
 msgid "Add updated date."
-msgstr "Lisää päivityksen päivämäärä."
+msgstr "Aktualisierungsdatum hinzufügen."
 
 #: includes/metabox.php:69
 msgid "m/d/y"
-msgstr "m/d/y"
+msgstr "M/T/J"
 
 #: includes/settings.php:22
 msgid "Default demo link Style"
-msgstr "Demolinkin oletusväri"
+msgstr "Standard-Linkschema für Demo"
 
 #: includes/settings.php:23
 msgid "Choose the style you want to use for the demo link button"
-msgstr "Valitse demolinkin värityyli"
+msgstr "Wähle das Schema aus, das du für die Demo-Link-Schaltfläche verwenden möchtest."
 
 #: includes/shortcodes.php:23
 msgid "Download"
-msgstr "Lataus"
+msgstr "Download"
 
 #: includes/taxonomy.php:24
 msgid "Search Features"
-msgstr "Etsi ominaisuuksia"
+msgstr "Zusatzfunktionen suchen"
 
 #: includes/taxonomy.php:25
 msgid "All Features"
-msgstr "Kaikki ominaisuudet"
+msgstr "Alle Zusatzfunktionen"
 
 #: includes/taxonomy.php:26
 msgid "Parent Feature"
-msgstr "Ylemmän tason ominaisuus"
+msgstr "Übergeordnete Zusatzfunktion"
 
 #: includes/taxonomy.php:27
 msgid "Parent Feature:"
-msgstr "Ylemmän tason ominaisuus:"
+msgstr "Übergeordnete Zusatzfunktion:"
 
 #: includes/taxonomy.php:28
 msgid "Edit Features"
-msgstr "Editoi ominaisuuksia"
+msgstr "Zusatzfunktionen bearbeiten"
 
 #: includes/taxonomy.php:29
 msgid "Update Feature"
-msgstr "Päivitä ominaisuus"
+msgstr "Zusatzfunktion aktualisieren"
 
 #: includes/taxonomy.php:30
 msgid "Add New Feature"
-msgstr "Lisää uusi ominaisuus"
+msgstr "Zusatzfunktion hinzufügen"
 
 #: includes/taxonomy.php:31
 msgid "New Feature Name"
-msgstr "Uuden ominaisuuden nimi"
+msgstr "Name der Zusatzfunktion"
 
 #: includes/taxonomy.php:32
 msgid "Features"
-msgstr "Ominaisuudet"
+msgstr "Funktionen"
 
 #: includes/widgets.php:24
 msgid "Display download info."
-msgstr "Näytä latauksien info."
+msgstr "Downloadinformationen anzeigen."
 
 #: includes/widgets.php:147
 msgid "Support"
-msgstr "Tuki"
+msgstr "Support"
 
 #: includes/widgets.php:154
 msgid "Documentation"
-msgstr "Dokumentaatio"
+msgstr "Dokumentation"
 
 #: includes/widgets.php:161
 msgid "Repository"
-msgstr "Github"
+msgstr "Repository"
 
 #: includes/widgets.php:168
 msgid "Changelog"
-msgstr "Muutosloki"
+msgstr "Changelog"
 
 #: includes/widgets.php:175
 msgid "<span class=\"edd-download-info-version\">Version:</span> %1$s"
-msgstr "<span class=\"edd-download-info-version\">Versio:</span> %1$s"
+msgstr "<span class=\"edd-download-info-version\">Version:</span> %1$s"
 
 #: includes/widgets.php:182
 msgid "<span class=\"edd-download-info-download\">Downloads:</span> %1$s"
-msgstr "<span class=\"edd-download-info-download\">Lataukset:</span> %1$s"
+msgstr "<span class=\"edd-download-info-download\">Downloads:</span> %1$s"
 
 #: includes/widgets.php:189
 msgid "<span class=\"edd-download-info-updated\">Updated:</span>"
-msgstr "<span class=\"edd-download-info-updated\">Päivitetty:</span>"
+msgstr "<span class=\"edd-download-info-updated\">Aktualisiert:</span>"
 
 #: includes/widgets.php:241
 msgid "Download info"
-msgstr "Latauksien info"
+msgstr "Downloadinformationen"
 
 #: includes/widgets.php:254 includes/widgets.php:425
 msgid "Title:"
-msgstr "Otsikko:"
+msgstr "Titel:"
 
 #: includes/widgets.php:260
 msgid "Show Feature Image?"
-msgstr "Näytä artikkelikuva?"
+msgstr "Beitragsbild anzeigen?"
 
 #: includes/widgets.php:265
 msgid "Show purchase link in button?"
-msgstr "Näytä ostoksen linkki painikkeena?"
+msgstr "\"Kaufen\"-Link in Schaltfläche anzeigen?"
 
 #: includes/widgets.php:270
 msgid "Show demo link in button?"
-msgstr "Näytä demolinkki painikkeena?"
+msgstr "Demo-Link in Schaltfläche anzeigen?"
 
 #: includes/widgets.php:275
 msgid "Open demo link in a new window?"
-msgstr "Avaa demolinkki uudessa ikkunassa?"
+msgstr "Demo-Link in neuem Fenster öffnen?"
 
 #: includes/widgets.php:280
 msgid "Show download count?"
-msgstr "Näytä latauksien lukumäärä?"
+msgstr "Downloadzähler anzeigen?"
 
 #: includes/widgets.php:306
 msgid "Display the downloads features."
-msgstr "Näytä latauksien ominaisuudet."
+msgstr "Download-Funktionen einblenden."
 
 #: includes/widgets.php:319 includes/widgets.php:416
 msgid "Download Features"
-msgstr "Latauksien ominaisuudet"
+msgstr "Download-Funktionen"
 
 #: includes/widgets.php:431
 msgid "Show features as links?"
-msgstr "Näytä ominaisuudet linkkeinä?"
+msgstr "Zusatzfunktionen als Links?"
 
 #. Plugin Name of the plugin/theme
 msgid "EDD Download Info"
@@ -195,8 +202,7 @@ msgstr "https://foxland.fi/downloads/edd-download-info/"
 
 #. Description of the plugin/theme
 msgid "Adds download info metabox and widget to Easy Digital Downloads."
-msgstr ""
-"Lisää vimpaimen ja muita ominaisuuksia Easy Digital Downloads -lisäosaan."
+msgstr "Fügt eine Metabox und ein Widget über Downloadinformationen zu Easy Digital Downloads hinzu."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
@@ -209,9 +215,9 @@ msgstr "https://foxland.fi"
 #: includes/taxonomy.php:22
 msgctxt "taxonomy general name"
 msgid "Download Features"
-msgstr "Latauksien ominaisuudet"
+msgstr "Zusatzfunktionen herunterladen"
 
 #: includes/taxonomy.php:23
 msgctxt "taxonomy singular name"
 msgid "Feature"
-msgstr "Ominaisuudet"
+msgstr "Zusatzfunktion"
