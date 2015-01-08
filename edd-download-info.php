@@ -3,7 +3,7 @@
 * Plugin Name: EDD Download Info
 * Plugin URI: https://foxland.fi/downloads/edd-download-info/
 * Description: Adds download info metabox and widget to Easy Digital Downloads.
-* Version: 0.1.9
+* Version: 0.1.9.1
 * Text Domain: edd-download-info
 * Domain Path: /languages
 * Author: Sami Keijonen
@@ -17,7 +17,7 @@
 * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 *
 * @package EDDDownloadInfo
-* @version 0.1.9
+* @version 0.1.9.1
 * @author Sami Keijonen <sami.keijonen@foxnet.fi>
 * @copyright Copyright (c) 2014, Sami Keijonen
 * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
