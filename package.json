@@ -1,6 +1,6 @@
 {
   "name": "edd-download-info",
-  "version": "0.1.9.1",
+  "version": "1.1",
   "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
