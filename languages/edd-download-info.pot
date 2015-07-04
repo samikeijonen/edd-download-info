@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the EDD Download Info package.
 msgid ""
 msgstr ""
-"Project-Id-Version: EDD Download Info 0.1.9.1\n"
+"Project-Id-Version: EDD Download Info 1.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/edd-download-info\n"
 "POT-Creation-Date: 2014-09-28 13:06:20+00:00\n"
 "MIME-Version: 1.0\n"
@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.4.5\n"
+"X-Generator: grunt-wp-i18n 0.5.0\n"
 
 #: includes/functions.php:26
 msgid "View Details:"
