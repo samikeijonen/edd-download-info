@@ -32,7 +32,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		);
 
 		/* Create the widget. */
-		$this->WP_Widget(
+		parent::__construct(
 			'edd-download-info',							// $this->id_base
 			__( 'Download Info', 'edd-download-info' ),	   	// $this->name
 			$widget_options,								// $this->widget_options
@@ -314,7 +314,7 @@ class EDD_Download_Info_Features_Widget extends WP_Widget {
 		);
 
 		/* Create the widget. */
-		$this->WP_Widget(
+		parent::__construct(
 			'edd-download-info-features',					// $this->id_base
 			__( 'Download Features', 'edd-download-info' ),	// $this->name
 			$widget_options,								// $this->widget_options
