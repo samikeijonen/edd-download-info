@@ -170,7 +170,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		<?php }
 
 		/* If version is set, echo it. */
-		if ( !empty( $version ) ) { ?>
+		if ($instance['show_version'] && !empty( $version ) ) { ?>
 
 			<li><?php printf( __( '<span class="edd-download-info-version">Version:</span> %1$s', 'edd-download-info' ), $version ); ?></li>
 
@@ -224,6 +224,7 @@ class EDD_Download_Info_Widget extends WP_Widget {
 		$instance['show_demo_link'] = strip_tags( $new_instance['show_demo_link'] );
 		$instance['open_demo_link'] = strip_tags( $new_instance['open_demo_link'] );
 		$instance['show_download_count'] = strip_tags( $new_instance['show_download_count'] );
+                $instance['show_version'] = strip_tags( $new_instance['show_version'] );
 
 		return $instance;
 
@@ -243,7 +244,8 @@ class EDD_Download_Info_Widget extends WP_Widget {
 			'show_purchase_link' => 1,
 			'show_demo_link' => 1,
 			'open_demo_link' => 1,
-			'show_download_count' => 1
+			'show_download_count' => 1,
+                        'show_version' => true
 		) );
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -279,6 +281,10 @@ class EDD_Download_Info_Widget extends WP_Widget {
 				<input type="checkbox" value="1" <?php checked( '1', $instance['show_download_count'] ); ?> id="<?php echo $this->get_field_id( 'show_download_count' ); ?>" name="<?php echo $this->get_field_name( 'show_download_count' ); ?>" />
 				<label for="<?php echo $this->get_field_id( 'show_download_count' ); ?>"><?php _e( 'Show download count?', 'edd-download-info' ); ?></label>
 			</p>
+			<p>
+				<input type="checkbox" value="1" <?php checked( '1', $instance['show_version'] ); ?> id="<?php echo $this->get_field_id( 'show_version' ); ?>" name="<?php echo $this->get_field_name( 'show_version' ); ?>" />
+				<label for="<?php echo $this->get_field_id( 'show_version' ); ?>"><?php _e( 'Show version?', 'edd-download-info' ); ?></label>
+			</p>                        
 
 		<div style="clear:both;">&nbsp;</div>
 	<?php
