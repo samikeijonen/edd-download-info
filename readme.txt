@@ -1,5 +1,5 @@
 === EDD Download Info ===
-Contributors: sami.keijonen
+Contributors: sami.keijonen, kprovance
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E65RCFVD3QGYU
 Tags: EDD, download, downloads, add-on, digital, easy 
 Requires at least: 3.9
